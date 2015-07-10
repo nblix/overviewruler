@@ -16,7 +16,7 @@
  *
  */
 
-package com.ssn.ecp.quickoverviewruler;
+package com.ssn.quickoverviewruler;
 
 import org.eclipse.jface.text.Position;
 import org.eclipse.jface.text.source.Annotation;

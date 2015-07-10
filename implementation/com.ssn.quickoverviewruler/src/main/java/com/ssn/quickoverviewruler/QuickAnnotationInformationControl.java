@@ -16,9 +16,10 @@
  *
  */
 
-package com.ssn.ecp.quickoverviewruler;
+package com.ssn.quickoverviewruler;
 
 import java.lang.reflect.Field;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;

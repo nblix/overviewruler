@@ -13,7 +13,7 @@
  *
  */
 
-package com.ssn.ecp.quickoverviewruler;
+package com.ssn.quickoverviewruler;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;

@@ -1,7 +1,7 @@
 /** 
  * 
  */
-package com.ssn.ecp.quickoverviewruler;
+package com.ssn.quickoverviewruler;
 
 import java.util.ArrayList;
 import java.util.Collections;
