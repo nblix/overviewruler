@@ -3,7 +3,7 @@
   <classpathentry kind="output" path="target/classes"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
   <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/ssn/com.ssn.quickoverviewruler/0.9.0.qualifier/com.ssn.quickoverviewruler-0.9.0.qualifier.jar"/>
+  <classpathentry kind="src" path="/com.ssn.quickoverviewruler"/>
   <classpathentry kind="lib" path="/home/jann/.m2/repository/p2/osgi/bundle/org.eclipse.ui/3.107.0.v20150507-1945/org.eclipse.ui-3.107.0.v20150507-1945.jar"/>
   <classpathentry kind="lib" path="/home/jann/.m2/repository/p2/osgi/bundle/org.eclipse.core.runtime/3.11.0.v20150405-1723/org.eclipse.core.runtime-3.11.0.v20150405-1723.jar"/>
   <classpathentry kind="lib" path="/home/jann/.m2/repository/p2/osgi/bundle/org.eclipse.ui.editors/3.9.0.v20150213-1939/org.eclipse.ui.editors-3.9.0.v20150213-1939.jar"/>
