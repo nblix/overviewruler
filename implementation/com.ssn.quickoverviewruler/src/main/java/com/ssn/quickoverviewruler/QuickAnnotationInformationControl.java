@@ -1,19 +1,20 @@
-/*
- * Copyright (c) 2006 SSI Schaefer Noell GmbH
+/**
+ * Copyright (C) 2015 Jann Schneider
+ *   
+ *    This file is part of the QuickoverviewRuler Feature.
  *
- * $Header: /home/cvs/data1/InternalProjects/SSNEclipsePlugin/Implementation/plugins/com.ssn.ecp.quickoverviewruler/src/java/impl/com/ssn/ecp/quickoverviewruler/QuickAnnotationInformationControl.java,v 1.3 2007/10/01 15:05:32 cvogele Exp $
- *
- * Change History
- *   $Log: QuickAnnotationInformationControl.java,v $
- *   Revision 1.3  2007/10/01 15:05:32  cvogele
- *   show warnings
- *
- *   Revision 1.2  2007/10/01 10:10:26  cvogele
- *   reveal region at goto
- *
- *   Revision 1.1  2007/10/01 09:53:32  cvogele
- *   initial checkin
- *
+ *   this is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * The QuickoverviewRuler feature is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ * 
+ *  You should have received a copy of the GNU Lesser General Public License
+ * along with the QuickoverviewRuler Feature.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 package com.ssn.quickoverviewruler;
