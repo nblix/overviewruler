@@ -1,0 +1,182 @@
+/*
+ * Copyright (c) 2006 SSI Schaefer Noell GmbH
+ *
+ * $Header: /home/cvs/data1/InternalProjects/SSNEclipsePlugin/Implementation/plugins/com.ssn.ecp.quickoverviewruler/src/java/impl/com/ssn/ecp/quickoverviewruler/AnnotationContentProvider.java,v 1.3 2007/10/01 15:05:32 cvogele Exp $
+ *
+ * Change History
+ *   $Log: AnnotationContentProvider.java,v $
+ *   Revision 1.3  2007/10/01 15:05:32  cvogele
+ *   show warnings
+ *
+ *   Revision 1.2  2007/10/01 10:11:27  cvogele
+ *   sort
+ *
+ *   Revision 1.1  2007/10/01 09:53:32  cvogele
+ *   initial checkin
+ *
+ */
+
+package com.ssn.ecp.quickoverviewruler;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
+import org.eclipse.jface.text.Position;
+import org.eclipse.jface.text.source.Annotation;
+import org.eclipse.jface.text.source.IAnnotationModel;
+import org.eclipse.jface.viewers.ITreeContentProvider;
+import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess;
+
+public class AnnotationContentProvider implements ITreeContentProvider {
+
+  private final QuickAnnotationInformationControl infoControl;
+
+  private List<Object> annotationTypes;
+  private int currentIndex = -1;
+  private List<AnnotationWithPosition> annotations;
+  private DefaultMarkerAnnotationAccess annotationAccess = new DefaultMarkerAnnotationAccess();
+
+  public AnnotationContentProvider(QuickAnnotationInformationControl infoControl) {
+    super();
+    this.infoControl = infoControl;
+  }
+
+  private List<AnnotationWithPosition> findAnnotations() {
+    List<AnnotationWithPosition> annos = new ArrayList<AnnotationWithPosition>();
+    try {
+      IAnnotationModel model = infoControl.getEditor().getViewer().getAnnotationModel();
+      for (Iterator iterator = model.getAnnotationIterator(); iterator.hasNext();) {
+        Annotation anno = (Annotation) iterator.next();
+        if (containsAnnotationType(anno)) {
+          Position position = model.getPosition(anno);
+          AnnotationWithPosition newAnno = new AnnotationWithPosition(anno, position);
+          if (!containsAnnotation(annos, newAnno)) {
+            annos.add(newAnno);
+          }
+        }
+      }
+    } catch (Exception e) {
+      QuickAnnotationInformationControl.logError(e);
+    }
+    return annos;
+  }
+
+  private boolean containsAnnotation(List<AnnotationWithPosition> annos, AnnotationWithPosition newAnno) {
+    for (Iterator iterator = annos.iterator(); iterator.hasNext();) {
+      AnnotationWithPosition old = (AnnotationWithPosition) iterator.next();
+      if (old.getAnnotation().getType().equals(newAnno.getAnnotation().getType()) && old.getPosition().equals(newAnno.getPosition())) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private boolean containsAnnotationType(Annotation anno) {
+    for (Iterator iterator = annotationTypes.iterator(); iterator.hasNext();) {
+      Object annoType = iterator.next();
+      if (hasAnnotationType(anno, annoType)) {
+        return true;
+      }
+    }
+    return annotationTypes.contains(anno.getType());
+  }
+
+  private boolean hasAnnotationType(Annotation anno, Object annoType) {
+    return annotationAccess.isSubtype(anno.getType(), annoType);
+  }
+
+  public Object[] getChildren(Object parentElement) {
+    if (parentElement instanceof AnnotationWithPosition) {
+      return new Object[0];
+    } else {
+      return getAnnotationsOfType(parentElement);
+    }
+  }
+
+  private Object[] getAnnotationsOfType(Object type) {
+    ArrayList<AnnotationWithPosition> annosOfType = new ArrayList<AnnotationWithPosition>();
+    for (Iterator iterator = annotations.iterator(); iterator.hasNext();) {
+      AnnotationWithPosition anno = (AnnotationWithPosition) iterator.next();
+      if (hasAnnotationType(anno.getAnnotation(), type)) {
+        annosOfType.add(anno);
+      }
+    }
+    Collections.sort(annosOfType);
+    return annosOfType.toArray();
+  }
+
+  public Object getParent(Object element) {
+    if (element instanceof AnnotationWithPosition) {
+      AnnotationWithPosition anno = (AnnotationWithPosition) element;
+      return anno.getAnnotation().getType();
+    }
+    return null;
+  }
+
+  public boolean hasChildren(Object element) {
+    return !(element instanceof AnnotationWithPosition);
+  }
+
+  public Object[] getElements(Object inputElement) {
+    if (currentIndex == -1) {
+      return getUsedCategories();
+    } else {
+      return new Object[] { annotationTypes.get(currentIndex) };
+    }
+  }
+
+  private Object[] getUsedCategories() {
+    ArrayList<Object> types = new ArrayList<Object>();
+    for (Iterator iterator = annotationTypes.iterator(); iterator.hasNext();) {
+      Object t = iterator.next();
+      if (hasAnnotationOfType(t)) {
+        types.add(t);
+      }
+    }
+    return types.toArray();
+  }
+
+  private boolean hasAnnotationOfType(Object type) {
+    for (Iterator iterator = getAnnotations().iterator(); iterator.hasNext();) {
+      AnnotationWithPosition anno = (AnnotationWithPosition) iterator.next();
+      if (hasAnnotationType(anno.getAnnotation(), type)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private List<AnnotationWithPosition> getAnnotations() {
+    if (annotations == null) {
+      annotations = findAnnotations();
+    }
+    return annotations;
+  }
+
+  public void dispose() {
+    // empty
+  }
+
+  public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
+    // empty
+  }
+
+  public List<Object> getAnnotationTypes() {
+    return annotationTypes;
+  }
+
+  public void setAnnotationTypes(List<Object> annotationTypes) {
+    this.annotationTypes = annotationTypes;
+  }
+
+  public void showNextAnnotationType() {
+    currentIndex++;
+    if (currentIndex >= annotationTypes.size()) {
+      currentIndex = -1;
+    }
+  }
+
+}
