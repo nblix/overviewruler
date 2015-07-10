@@ -31,6 +31,7 @@ import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess;
 
+@SuppressWarnings("restriction")
 public class AnnotationContentProvider implements ITreeContentProvider {
 
   private final QuickAnnotationInformationControl infoControl;

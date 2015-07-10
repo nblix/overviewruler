@@ -20,7 +20,6 @@
 package com.ssn.quickoverviewruler;
 
 import java.lang.reflect.Field;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -51,6 +50,7 @@ import org.eclipse.ui.internal.editors.text.EditorsPlugin;
 import org.eclipse.ui.texteditor.AnnotationPreference;
 import org.eclipse.ui.texteditor.MarkerAnnotationPreferences;
 
+@SuppressWarnings("restriction")
 public class QuickAnnotationInformationControl extends AbstractInformationControl {
 
   private final JavaEditor editor;

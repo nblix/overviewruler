@@ -33,6 +33,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.internal.Workbench;
 
+@SuppressWarnings("restriction")
 public class OpenHandler extends AbstractHandler {
 
   public Object execute(ExecutionEvent arg0) {

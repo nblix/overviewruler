@@ -26,6 +26,7 @@ import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.IRegion;
 import org.eclipse.jface.viewers.LabelProvider;
 
+@SuppressWarnings("restriction")
 public class AnnotationLabelProvider extends LabelProvider {
 
   private final QuickAnnotationInformationControl informationControl;
