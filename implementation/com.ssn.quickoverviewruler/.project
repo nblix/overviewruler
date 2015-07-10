@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>com.ssn.quickoverviewruler</name>
-	<comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -22,19 +22,7 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.pde.PluginNature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>jdi.jar</name>
-			<type>1</type>
-			<location>/home/jann/.m2/repository/.cache/tycho/org.eclipse.jdt.debug-3.8.50.v20140317-1921.jar/jdi.jar</location>
-		</link>
-		<link>
-			<name>jdimodel.jar</name>
-			<type>1</type>
-			<location>/home/jann/.m2/repository/.cache/tycho/org.eclipse.jdt.debug-3.8.50.v20140317-1921.jar/jdimodel.jar</location>
-		</link>
-	</linkedResources>
 </projectDescription>
