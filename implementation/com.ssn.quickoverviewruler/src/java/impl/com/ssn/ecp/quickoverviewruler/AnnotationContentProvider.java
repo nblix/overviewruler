@@ -1,21 +1,6 @@
-/*
- * Copyright (c) 2006 SSI Schaefer Noell GmbH
- *
- * $Header: /home/cvs/data1/InternalProjects/SSNEclipsePlugin/Implementation/plugins/com.ssn.ecp.quickoverviewruler/src/java/impl/com/ssn/ecp/quickoverviewruler/AnnotationContentProvider.java,v 1.3 2007/10/01 15:05:32 cvogele Exp $
- *
- * Change History
- *   $Log: AnnotationContentProvider.java,v $
- *   Revision 1.3  2007/10/01 15:05:32  cvogele
- *   show warnings
- *
- *   Revision 1.2  2007/10/01 10:11:27  cvogele
- *   sort
- *
- *   Revision 1.1  2007/10/01 09:53:32  cvogele
- *   initial checkin
- *
+/** 
+ * 
  */
-
 package com.ssn.ecp.quickoverviewruler;
 
 import java.util.ArrayList;

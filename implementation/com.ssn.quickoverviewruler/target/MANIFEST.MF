@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.ssn.quickoverviewruler;singleton:=true
+Bundle-Name: com.ssn.ecp.quickoverviewruler
+Bundle-Version: 0.9.0.201507101812
+Bundle-ClassPath: .,jdi.jar,jdimodel.jar
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime;bundle-version
+ ="3.10.0",org.eclipse.ui.editors;bundle-version="3.8.0",org.eclipse.u
+ i.workbench.texteditor;bundle-version="3.9.0",org.eclipse.jface.text;
+ bundle-version="3.9.2",org.eclipse.jdt.ui;bundle-version="3.10.2"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: SSI Schaefer Noell GmbH
+

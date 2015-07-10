@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="ACX Eclipse Plugins" url="http://acxlin.wu.ssn:8080/ecp-updatesite/3.7/">
+      This update site contains Plugins and Features to simplify working with ACX projects.
+   </description>
+   <category-def name="com.ssn" label="Eclipse Accessibility Tools">
+      <description>
+         Provides some features to improove Eclipses accessibility to visually impaired users.
+      </description>
+   </category-def>
+</site>
