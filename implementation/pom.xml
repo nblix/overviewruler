@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.ssn</groupId>
   <artifactId>com.ssn.root</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>0.9.0.1</version>
   <packaging>pom</packaging>
 
   <name>Eclipse Accessibility Tools</name>
@@ -13,7 +13,30 @@
   <properties>
     <tycho.version>0.21.0</tycho.version>
     <project.build.sourceEncoding>iso8859-1</project.build.sourceEncoding>
+    <github-user>nblix</github-user>
+    <github-repo>OverviewRuler</github-repo>
   </properties>
+
+  <licenses>
+    <license>
+      <name>LGPL V3.0</name>
+      <url>http://www.gnu.org/licenses/lgpl.txt</url>
+    </license>
+  </licenses>
+
+<scm>
+  <connection>scm:git:https://github.com/{github-user}/{github-repo}.git</connection>
+  <developerConnection>scm:git:git@github.com:{github-user}/{github-repo}.git</developerConnection>
+  <url>https://github.com/{github-user}/{github-repo}</url>
+  <tag>V0.9.0.1-integration</tag>
+</scm>
+
+  <distributionManagement>
+    <site>
+      <id>gh-pages</id>
+      <url>${project.scm.developerConnection}</url>
+    </site>
+  </distributionManagement>
 
   <modules>
     <module>com.ssn.quickoverviewruler</module>
@@ -35,6 +58,15 @@
 
   <build>
     <plugins>
+    <plugin>
+      <artifactId>maven-release-plugin</artifactId>
+      <version>2.4.1</version>
+      <configuration>
+        <useReleaseProfile>false</useReleaseProfile>
+        <releaseProfiles>release</releaseProfiles>
+        <autoVersionSubmodules>true</autoVersionSubmodules>
+      </configuration>
+    </plugin>
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-maven-plugin</artifactId>
@@ -88,6 +120,16 @@
           <artifactId>tycho-compiler-plugin</artifactId>
           <version>${tycho.version}</version>
         </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-p2-repository-plugin</artifactId>
+        <version>${tycho.version}</version>
+        <configuration>
+          <includeAllDependencies>false</includeAllDependencies>
+          <createArtifactRepository>true</createArtifactRepository>
+          <compress>true</compress>
+        </configuration>
+      </plugin>
       </plugins>
     </pluginManagement>
   </build>
