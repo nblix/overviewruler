@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="OverviewRuler Feature" url="https://github.com/nblix/overviewruler/tree/master/release">
+      This update site contains the OverviewRuler feature
+   </description>
+   <feature url="features/com.ssn.quickoverviewruler.feature_0.9.0.201507110944.jar" id="com.ssn.quickoverviewruler.feature" version="0.9.0.201507110944">
+      <category name="com.ssn"/>
+   </feature>
+   <category-def name="com.ssn" label="Eclipse Accessibility Tools">
+      <description>
+         Provides some features to improove Eclipses accessibility to visually impaired users.
+      </description>
+   </category-def>
+</site>
