@@ -1,0 +1,18 @@
+This file is part of the OverviewRuler Feature 
+
+Uninstalling the OverviewRuler Feature
+=======================================
+
+To uninstall the feature perform the usual steps to uninstall any Eclipse Feature: 
+- Go to the help menu 
+- select "Installation details" and press Enter 
+- Tab to the list of installed features 
+- arrow down to select the "QuickoverviewRuler" feature from the list
+- Tab twice to the uninstall button and press Enter again
+- In the resulting dialog a list of features to uninstall is displayed 
+- simply tab to the finish button and press Enter 
+- after a short while Eclipse will ask you if you want to restart it in order to apply the changes. 
+- After a restart of Eclipse the feature will no longer be available 
+- Check by opening a Java editor and pressing Ctrl + k 
+-- Expected: nothing happens, maybe you'll hear a bell (if configured in your Desktop environment) 
+

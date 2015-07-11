@@ -1,0 +1,25 @@
+OverviewRuler Feature Quickstart 
+================================
+
+Related to Feature Version: 0.9.0 
+
+Introduction
+============ 
+
+This file contains some information to get you quickly started with the OverviewRuler Feature. It describes how to install, update and use the feature in your Eclipse IDE.
+
+Installation 
+============
+
+Prerequisites: 
+
+This Feature is intended to extend the JavaEditor functionallity. Therefore you will just need an installation of Eclipse including the Java Development Tools (aka. JDT). 
+
+Installing: 
+
+To install the latest stable release of the OverviewRuler feature follow these steps: 
+
+- Launch Eclipse if it isn't allready running 
+- go to the help menu 
+- select "Install new Software" and press Enter
+- 
