@@ -10,5 +10,6 @@
 
   <groupId>com.ssn</groupId>
   <artifactId>com.ssn.updatesite</artifactId>
-  <packaging>eclipse-update-site</packaging>
+  <version>0.9.0.1-qualifier</version>
+  <packaging>eclipse-repository</packaging>
 </project>
