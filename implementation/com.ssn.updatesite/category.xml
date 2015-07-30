@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/com.ssn.quickoverviewruler.feature_0.9.0.1-qualifier.jar" id="com.ssn.quickoverviewruler.feature" version="0.9.0.1-qualifier">
-      <category name="com.ssn.eat.categories.main"/>
-   </feature>
+   <feature url="features/com.ssn.quickoverviewruler.feature_0.9.0.1.jar" id="com.ssn.quickoverviewruler.feature" version="0.9.0.1"/>
    <category-def name="com.ssn.eat.categories.main" label="Eclipse Accessibility Tools">
       <description>
          IMPORTANT! This update site is not related to or afiliated by Eclipse! This category contains Features that should improove the accessibility of some eclipse widgets.
