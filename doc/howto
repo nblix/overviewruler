@@ -1,7 +1,7 @@
 OverviewRuler Feature Quickstart 
 ================================
 
-Related to Feature Version: 0.9.0 
+Related to Feature Version: 0.9.0.x
 
 Introduction
 ============ 
@@ -17,12 +17,13 @@ This Feature is intended to extend the JavaEditor functionallity. Therefore you 
 
 Installing: 
 
-To install the latest stable release of the OverviewRuler feature follow these steps: 
+To install the latest release of the OverviewRuler feature follow these steps: 
 
 - Launch Eclipse if it isn't allready running 
 - go to the help menu 
 - select "Install new Software" and press Enter
-- Enter this URL and press enter when you are asked for the update site: <fixme nblix>
+- Enter this URL and press enter when you are asked for the update site: 
+  https://nblix.github.io/luna/
 - Tab to the tree of features and select the <category> 
 - press shift + Cursor right to expand the category 
 - arrow down to the QuickoverviewRuler Feature and press space to select it 
@@ -39,11 +40,6 @@ Usage
 To test your installation open up a Java editor and press Ctrl + k. If everything was installed properly a little popup dialog will show up displaying the information of the right hand ruler in text form to you. 
 Furthermore you can select any entry from the tree and press enter to go directly to it in the editor. 
 The popup dialog is quite similar to the well known outline popup you can bring up by pressing Ctrl + o. 
-The OverviewRuler popup is made up of a tree that categorizes the found items of the current Java Editor by type. It will find any Errors, Warnings, Tasks (TODO and FIXME comments) and search results. Open the desired category by pressing shift + cursor right and arrow down to any element to read it. Press enter to go to it in the Java editor. Now the region of interesst is selected in the editor. That means you can now also press F2 to read the additional information shown in a tooltip like quickfix suggestions or an error description etc. 
-
-Updating the Feature 
-====================
-
-<tbd>
+The OverviewRuler popup is made up of a tree that categorizes the found items of the current Java Editor by type. It will find any Errors, Warnings, Tasks (TODO and FIXME comments) and search results. Open the desired category by pressing shift + cursor right and arrow down to any element to read its line number, description and the statement. Press enter to go to it in the Java editor. Now the region of interesst is selected in the editor. That means you can now also press F2 to read the additional information shown in a tooltip like quickfix suggestions or an error description etc. 
 
 
