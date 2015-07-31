@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Quickoverviewruler
-Bundle-SymbolicName: com.ssn.quickoverviewruler
+Bundle-SymbolicName: com.ssn.quickoverviewruler;singleton:=true
 Bundle-Version: 0.9.0.1
 Bundle-Activator: com.ssn.quickoverviewruler.Activator
 Bundle-Vendor: SSI Schaefer Noell GmbH
