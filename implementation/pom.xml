@@ -148,6 +148,16 @@
 
   <profiles>
     <profile>
+      <id>latest</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <main-repository>http://download.eclipse.org/releases/neon</main-repository>
+        <updates-repository>http://download.eclipse.org/releases/maintenance/</updates-repository>
+      </properties>
+    </profile>
+    <profile>
       <id>luna</id>
       <properties>
         <main-repository>http://download.eclipse.org/releases/luna</main-repository>
@@ -155,14 +165,18 @@
       </properties>
     </profile>
     <profile>
-      <id>mars</id>
+      <id>oxygen</id>
+      <properties>
+        <main-repository>http://download.eclipse.org/releases/oxygen</main-repository>
+        <updates-repository>http://download.eclipse.org/releases/maintenance/</updates-repository>
+      </properties>
+    </profile>
+    <profile>
+    <id>mars</id>
       <properties>
         <main-repository>http://download.eclipse.org/releases/mars/</main-repository>
         <updates-repository>http://download.eclipse.org/eclipse/updates/4.5milestones/</updates-repository>
       </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
     </profile>
   </profiles>
 
