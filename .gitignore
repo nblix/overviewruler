@@ -1,6 +1,7 @@
-**/*release*
-**/target/*
+*release*
+target/
 *.~
-**/*.~
-**/.settings/*
+.classpath
+.project
+.settings/
 
