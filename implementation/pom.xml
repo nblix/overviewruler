@@ -11,7 +11,7 @@
   <name>Eclipse Accessibility Tools</name>
 
   <properties>
-    <tycho.version>0.21.0</tycho.version>
+    <tycho.version>1.0.0</tycho.version>
     <project.build.sourceEncoding>iso8859-1</project.build.sourceEncoding>
     <github-user>nblix</github-user>
     <github-repo>OverviewRuler</github-repo>
@@ -58,7 +58,12 @@
 
   <build>
     <plugins>
-    <plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <version>2.9</version>
+      </plugin>
+      <plugin>
       <artifactId>maven-release-plugin</artifactId>
       <version>2.4.1</version>
       <configuration>
