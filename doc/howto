@@ -22,8 +22,12 @@ To install the latest release of the OverviewRuler feature follow these steps:
 - Launch Eclipse if it isn't allready running 
 - go to the help menu 
 - select "Install new Software" and press Enter
-- Enter this URL and press enter when you are asked for the update site: 
+- Enter the URL related to your eclipse version and press enter when you are asked for the update site: 
+-- Currently available site are: 
   https://nblix.github.io/luna/
+  https://nblix.github.io/mars/
+  https://nblix.github.io/latest (containing the neon features) 
+  https://nblix.github.io/oxygen/
 - Tab to the tree of features and select the <category> 
 - press shift + Cursor right to expand the category 
 - arrow down to the QuickoverviewRuler Feature and press space to select it 
