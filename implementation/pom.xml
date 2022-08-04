@@ -11,7 +11,7 @@
 	<name>Eclipse Accessibility Tools</name>
 
 	<properties>
-		<tycho.version>1.0.0</tycho.version>
+	<tycho.version>2.7.4</tycho.version>
 		<project.build.sourceEncoding>iso8859-1</project.build.sourceEncoding>
 		<github-user>nblix</github-user>
 		<github-repo>OverviewRuler</github-repo>
@@ -153,8 +153,8 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<main-repository>http://download.eclipse.org/releases/neon</main-repository>
-				<updates-repository>http://download.eclipse.org/releases/maintenance/</updates-repository>
+				<main-repository>https://download.eclipse.org/releases/latest</main-repository>
+				<updates-repository>https://download.eclipse.org/eclipse/updates/4.24/</updates-repository>
 			</properties>
 		</profile>
 		<profile>
